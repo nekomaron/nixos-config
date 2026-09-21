@@ -149,7 +149,7 @@ PanelWindow {
                                         					text: "󰏫"
                                         					color: root.walBackground
                                         					font.pixelSize: 12
-                                        					font.family: "JetBrainsMono Nerd Font"
+                                        					font.family: root.fontMono
 									}
 								}
 								MouseArea {
@@ -172,14 +172,14 @@ PanelWindow {
                                     					color: root.walColor5
                                     					font.pixelSize: 26
                                     					font.bold: true
-                                    					font.family: "JetBrainsMono Nerd Font"
+                                    					font.family: root.fontMono
 								}
 								Text {
 									id: uptimeText
                                     					text: "up ..."
                                    					color: root.walForeground
                                     					font.pixelSize: 12
-                                    					font.family: "JetBrainsMono Nerd Font"
+                                    					font.family: root.fontMono
 								}
 							}
 						}
@@ -198,7 +198,7 @@ PanelWindow {
                                     					color: root.walColor5
                                     					font.pixelSize: 12
                                     					font.bold: true
-                                    					font.family: "JetBrainsMono Nerd Font"
+                                    					font.family: root.fontMono
                                     					Layout.alignment: Qt.AlignHCenter
 								}
 								Flickable {
@@ -381,13 +381,13 @@ Process {
 							text: "󰍹"
                             				color: laptopScreenToggle.laptopScreenEnabled ? root.walColor5 : root.walColor8
                             				font.pixelSize: 18
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
 						}
 						Text {
 							text: "Laptop Screen"
                             				color: root.walForeground
                             				font.pixelSize: 13
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
                             				Layout.fillWidth: true
 						}
 						Text {
@@ -395,7 +395,7 @@ Process {
                             				color: laptopScreenToggle.laptopScreenEnabled ? root.walColor2 : root.walColor8
                             				font.pixelSize: 10
                             				font.bold: true
-                          				font.family: "JetBrainsMono Nerd Font"
+                          				font.family: root.fontMono
 						}
 						Rectangle {
 							width: 44
@@ -447,7 +447,7 @@ Process {
                             				text: "󰁹"
                             				color: root.walColor2
                             				font.pixelSize: 32
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
 						}
 						ColumnLayout {
 							Layout.fillWidth: true
@@ -456,14 +456,14 @@ Process {
 								text: "Battery " + dashboard.batVal + "%"
                                 				color: root.walForeground
                                 				font.pixelSize: 18
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
 							}
 							Text {
 								id: batStatus
                                 				text: "Checking..."
                                 				color: root.walColor8
                                 				font.pixelSize: 12
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
 							}
 						}
 					}
@@ -513,7 +513,7 @@ Process {
                                 				text: dashboard.volVal == 0 ? "󰝟" : dashboard.volVal < 50 ? "󰖀" : "󰕾"
                                 				color: root.walColor4
                                 				font.pixelSize: 18
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
                                 				verticalAlignment: Text.AlignVCenter
                                 				height: 24
                                 				MouseArea {
@@ -574,7 +574,7 @@ Process {
 								text: dashboard.volVal + "%"
                                 				color: root.walColor8
                                 				font.pixelSize: 11
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
                                 				horizontalAlignment: Text.AlignRight
                                 				verticalAlignment: Text.AlignVCenter
                                 				height: 24
@@ -588,7 +588,7 @@ Process {
                                 				text: dashboard.brightVal < 30 ? "󰃞" : dashboard.brightVal < 70 ? "󰃟" : "󰃠"
                                 				color: root.walColor13
                                 				font.pixelSize: 18
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
                                 				verticalAlignment: Text.AlignVCenter
                                 				height: 24
 							}
@@ -639,7 +639,7 @@ Process {
                                 				text: dashboard.brightVal + "%"
                                 				color: root.walColor8
                                 				font.pixelSize: 11
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
                                 				horizontalAlignment: Text.AlignRight
                                 				verticalAlignment: Text.AlignVCenter
                                 				height: 24
@@ -662,7 +662,7 @@ Process {
                             				text: "12:00:00 AM"
                             				color: root.walColor5
                             				font.pixelSize: 40
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
 						}
 						Text {
 							id: dateDisplay
@@ -670,7 +670,7 @@ Process {
                            				text: "01.01.2026, Friday"
                             				color: root.walForeground
                             				font.pixelSize: 14
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
 						}
 					}
 				}
@@ -743,14 +743,14 @@ Process {
 						text: icon
                         			color: barColor
                         			font.pixelSize: 16
-                        			font.family: "JetBrainsMono Nerd Font"
+                        			font.family: root.fontMono
 					}
 					Text {
 						anchors.horizontalCenter: parent.horizontalCenter
                         			text: value + "%"
                         			color: root.walForeground
                         			font.pixelSize: 14
-                      				font.family: "JetBrainsMono Nerd Font"
+                      				font.family: root.fontMono
 					}
 				}
 			}
@@ -759,7 +759,7 @@ Process {
                 		text: label
                 		color: root.walColor8
                 		font.pixelSize: 11
-                		font.family: "JetBrainsMono Nerd Font"
+                		font.family: root.fontMono
 			}
 		}
 	}
@@ -781,7 +781,7 @@ Process {
             		text: icon
             		color: iconColor
             		font.pixelSize: 18
-            		font.family: "JetBrainsMono Nerd Font"
+            		font.family: root.fontMono
 		}
 		MouseArea {
 			id: powerMa

@@ -29,6 +29,9 @@ ShellRoot {
 	readonly property color walColor8:     "#6c6c6c"   // dim/overlay
 	readonly property color walColor13:    "#bfbfbf"   // secondary accent
 
+	// ── Font ─────────────────────────────────────────────────────────────
+	readonly property string fontMono: "JetBrainsMono Nerd Font"
+
 	// ── Panel visibility ─────────────────────────────────────────────────
 	property bool dashboardVisible: false
 	property var _ui: UIState

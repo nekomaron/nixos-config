@@ -159,7 +159,7 @@ PanelWindow {
 								color: root.walColor5
 								font.pixelSize: 15
 								font.bold: true
-								font.family: "JetBrainsMono Nerd Font"
+								font.family: root.fontMono
 								Layout.fillWidth: true
 								elide: Text.ElideRight
 							}
@@ -183,21 +183,21 @@ PanelWindow {
 										text: musicPanel.playerIcon(musicPanel.activePlayer)
 										color: root.walColor5
 										font.pixelSize: 11
-										font.family: "JetBrainsMono Nerd Font"
+										font.family: root.fontMono
 										anchors.verticalCenter: parent.verticalCenter
 									}
 									Text {
 										text: musicPanel.playerDisplayName(musicPanel.activePlayer)
 										color: root.walColor5
 										font.pixelSize: 10
-										font.family: "JetBrainsMono Nerd Font"
+										font.family: root.fontMono
 										anchors.verticalCenter: parent.verticalCenter
 									}
 									Text {
 										text: musicPanel.playerDropdownOpen ? "󰅃" : "󰅀"
 										color: root.walColor5
 										font.pixelSize: 9
-										font.family: "JetBrainsMono Nerd Font"
+										font.family: root.fontMono
 										anchors.verticalCenter: parent.verticalCenter
 									}
 								}
@@ -217,7 +217,7 @@ PanelWindow {
 							text: musicPanel.trackArtist || ""
 							color: root.walForeground
 							font.pixelSize: 12
-							font.family: "JetBrainsMono Nerd Font"
+							font.family: root.fontMono
 							opacity: 0.7
 							Layout.fillWidth: true
 							elide: Text.ElideRight
@@ -233,7 +233,7 @@ PanelWindow {
 								text: musicPanel.formatTime(musicPanel.position)
 								color: root.walColor8
 								font.pixelSize: 10
-								font.family: "JetBrainsMono Nerd Font"
+								font.family: root.fontMono
 							}
 							Rectangle {
 								Layout.fillWidth: true
@@ -262,7 +262,7 @@ PanelWindow {
 								text: musicPanel.formatTime(musicPanel.length)
 								color: root.walColor8
 								font.pixelSize: 10
-								font.family: "JetBrainsMono Nerd Font"
+								font.family: root.fontMono
 							}
 						}
 						Row {
@@ -279,7 +279,7 @@ PanelWindow {
 									text: "󰒮"
 									color: root.walForeground
 									font.pixelSize: 16
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 								}
 								MouseArea {
 									id: prevMa
@@ -299,7 +299,7 @@ PanelWindow {
 									text: musicPanel.playerStatus === "Playing" ? "󰏤" : "󰐊"
 									color: root.walBackground
 									font.pixelSize: 18
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 								}
 								MouseArea {
 									anchors.fill: parent
@@ -317,7 +317,7 @@ PanelWindow {
 									text: "󰒭"
 									color: root.walForeground
 									font.pixelSize: 16
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 								}
 								MouseArea {
 									id: nextMa
@@ -372,7 +372,7 @@ PanelWindow {
 									text: "󰝚"
 									color: root.walColor8
 									font.pixelSize: 32
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 									opacity: 0.5
 								}
 							}
@@ -405,7 +405,7 @@ PanelWindow {
 							color: root.walColor5
 							font.pixelSize: 11
 							font.bold: true
-							font.family: "JetBrainsMono Nerd Font"
+							font.family: root.fontMono
 						}
 						Text {
 							anchors.right: parent.right
@@ -414,7 +414,7 @@ PanelWindow {
 							text: musicPanel.availablePlayers.length === 0 ? "No players" : musicPanel.availablePlayers.length + " found"
 							color: root.walColor8
 							font.pixelSize: 9
-							font.family: "JetBrainsMono Nerd Font"
+							font.family: root.fontMono
 							opacity: 0.6
 						}
 					}
@@ -457,7 +457,7 @@ PanelWindow {
 									text: "󰝚"
 									color: musicPanel.activePlayer === "%any" ? root.walColor5 : root.walColor8
 									font.pixelSize: 14
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 								}
 								Text {
 									anchors.verticalCenter: parent.verticalCenter
@@ -465,7 +465,7 @@ PanelWindow {
 									color: musicPanel.activePlayer === "%any" ? root.walColor5 : root.walForeground
 									font.pixelSize: 12
 									font.bold: musicPanel.activePlayer === "%any"
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 									width: 120
 								}
 								Text {
@@ -473,7 +473,7 @@ PanelWindow {
 									text: "any active"
 									color: root.walColor8
 									font.pixelSize: 9
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 									opacity: 0.5
 								}
 								Text {
@@ -482,7 +482,7 @@ PanelWindow {
 									text: "󰄬"
 									color: root.walColor5
 									font.pixelSize: 12
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 								}
 							}
 							MouseArea {
@@ -519,7 +519,7 @@ PanelWindow {
 										text: musicPanel.playerIcon(modelData)
 										color: musicPanel.activePlayer === modelData ? root.walColor5 : root.walColor8
 										font.pixelSize: 14
-										font.family: "JetBrainsMono Nerd Font"
+										font.family: root.fontMono
 									}
 									Text {
 										anchors.verticalCenter: parent.verticalCenter
@@ -527,7 +527,7 @@ PanelWindow {
 										color: musicPanel.activePlayer === modelData ? root.walColor5 : root.walForeground
 										font.pixelSize: 12
 										font.bold: musicPanel.activePlayer === modelData
-										font.family: "JetBrainsMono Nerd Font"
+										font.family: root.fontMono
 										width: 200
 										elide: Text.ElideRight
 									}
@@ -537,7 +537,7 @@ PanelWindow {
 										text: "󰄬"
 										color: root.walColor5
 										font.pixelSize: 12
-										font.family: "JetBrainsMono Nerd Font"
+										font.family: root.fontMono
 									}
 								}
 								MouseArea {

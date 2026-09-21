@@ -253,7 +253,7 @@ border.width: 1
                         text: "󰅍"
                         color: root.walColor5
                         font.pixelSize: 20
-                        font.family: "JetBrainsMono Nerd Font"
+                        font.family: root.fontMono
                     }
                     Text {
                         text: clipPanel.currentTab === 0 ? "Clipboard"
@@ -262,7 +262,7 @@ border.width: 1
                         color: root.walColor5
                         font.pixelSize: 15
                         font.bold: true
-                        font.family: "JetBrainsMono Nerd Font"
+                        font.family: root.fontMono
                         Layout.fillWidth: true
                     }
 
@@ -278,7 +278,7 @@ border.width: 1
                             text: "󰩺"
                             color: wipeMa.containsMouse ? root.walColor1 : root.walColor8
                             font.pixelSize: 14
-                            font.family: "JetBrainsMono Nerd Font"
+                            font.family: root.fontMono
                             Behavior on color { ColorAnimation { duration: 140 } }
                         }
                         MouseArea {
@@ -303,7 +303,7 @@ border.width: 1
                             color: root.walColor5
                             font.pixelSize: 10
                             font.bold: true
-                            font.family: "JetBrainsMono Nerd Font"
+                            font.family: root.fontMono
                         }
                     }
                 }
@@ -344,7 +344,7 @@ border.width: 1
                                         text: modelData.icon
                                         color: active ? root.walColor5 : root.walColor8
                                         font.pixelSize: 13
-                                        font.family: "JetBrainsMono Nerd Font"
+                                        font.family: root.fontMono
                                         Behavior on color { ColorAnimation { duration: 150 } }
                                     }
                                     Text {
@@ -353,7 +353,7 @@ border.width: 1
                                         color: active ? root.walColor5 : root.walColor8
                                         font.pixelSize: 11
                                         font.bold: active
-                                        font.family: "JetBrainsMono Nerd Font"
+                                        font.family: root.fontMono
                                         Behavior on color { ColorAnimation { duration: 150 } }
                                     }
                                 }
@@ -389,7 +389,7 @@ border.width: 1
                             text: ""
                             color: searchField.activeFocus ? root.walColor5 : root.walColor8
                             font.pixelSize: 14
-                            font.family: "JetBrainsMono Nerd Font"
+                            font.family: root.fontMono
                             Behavior on color { ColorAnimation { duration: 150 } }
                         }
 
@@ -399,7 +399,7 @@ border.width: 1
                             Layout.fillHeight: true
                             color: root.walForeground
                             font.pixelSize: 13
-                            font.family: "JetBrainsMono Nerd Font"
+                            font.family: root.fontMono
                             verticalAlignment: TextInput.AlignVCenter
                             selectByMouse: true
                             clip: true
@@ -449,7 +449,7 @@ border.width: 1
                                 anchors.centerIn: parent; text: "󰅖"
                                 color: root.walColor8
                                 font.pixelSize: 12
-                                font.family: "JetBrainsMono Nerd Font"
+                                font.family: root.fontMono
                             }
                             MouseArea {
                                 id: clrHovMa; anchors.fill: parent
@@ -545,7 +545,7 @@ border.width: 1
                                     }
                                     text: entry ? entry.preview : ""
                                     font.pixelSize: 12
-                                    font.family: "JetBrainsMono Nerd Font"
+                                    font.family: root.fontMono
                                     color: isFoc ? root.walColor5 : root.walForeground
                                     wrapMode: Text.WrapAtWordBoundaryOrAnywhere
                                     maximumLineCount: 6
@@ -573,7 +573,7 @@ border.width: 1
                                 text: "󰅍"
                                 color: root.walColor8
                                 font.pixelSize: 28
-                                font.family: "JetBrainsMono Nerd Font"
+                                font.family: root.fontMono
                                 opacity: 0.3
                             }
                             Text {
@@ -582,7 +582,7 @@ border.width: 1
                                     ? "No clipboard history" : "No matches"
                                 color: root.walColor8
                                 font.pixelSize: 12
-                                font.family: "JetBrainsMono Nerd Font"
+                                font.family: root.fontMono
                                 opacity: 0.5
                             }
                         }
@@ -669,13 +669,13 @@ border.width: 1
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 text: "󰞅"
                                 color: root.walColor8; font.pixelSize: 28
-                                font.family: "JetBrainsMono Nerd Font"; opacity: 0.3
+                                font.family: root.fontMono; opacity: 0.3
                             }
                             Text {
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 text: "No emoji found"
                                 color: root.walColor8; font.pixelSize: 12
-                                font.family: "JetBrainsMono Nerd Font"; opacity: 0.5
+                                font.family: root.fontMono; opacity: 0.5
                             }
                         }
                     }
@@ -733,7 +733,7 @@ border.width: 1
                                     Layout.fillWidth: true
                                     text: item ? item.t : ""
                                     font.pixelSize: 14
-                                    font.family: "JetBrainsMono Nerd Font"
+                                    font.family: root.fontMono
                                     color: isFoc ? root.walColor5 : root.walForeground
                                     elide: Text.ElideRight
                                     Behavior on color { ColorAnimation { duration: 100 } }
@@ -750,7 +750,7 @@ border.width: 1
                                         anchors.centerIn: parent
                                         text: item ? item.cat : ""
                                         font.pixelSize: 9
-                                        font.family: "JetBrainsMono Nerd Font"
+                                        font.family: root.fontMono
                                         color: root.walColor8
                                         elide: Text.ElideRight
                                         maximumLineCount: 1
@@ -775,13 +775,13 @@ border.width: 1
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 text: "󰙃"
                                 color: root.walColor8; font.pixelSize: 28
-                                font.family: "JetBrainsMono Nerd Font"; opacity: 0.3
+                                font.family: root.fontMono; opacity: 0.3
                             }
                             Text {
                                 anchors.horizontalCenter: parent.horizontalCenter
                                 text: "No kaomoji found"
                                 color: root.walColor8; font.pixelSize: 12
-                                font.family: "JetBrainsMono Nerd Font"; opacity: 0.5
+                                font.family: root.fontMono; opacity: 0.5
                             }
                         }
                     }
@@ -809,7 +809,7 @@ border.width: 1
                                 ? clipPanel.emojiFiltered.length + " emoji"
                                 : clipPanel.kaoFiltered.length + " kaomoji"
                             color: root.walColor8; font.pixelSize: 9
-                            font.family: "JetBrainsMono Nerd Font"; opacity: 0.7
+                            font.family: root.fontMono; opacity: 0.7
                         }
 
                         Item { Layout.fillWidth: true }
@@ -817,19 +817,19 @@ border.width: 1
                         Text {
                             text: clipPanel.currentTab === 0 ? "↵ paste" : "↵ copy"
                             color: root.walColor8; font.pixelSize: 9
-                            font.family: "JetBrainsMono Nerd Font"; opacity: 0.6
+                            font.family: root.fontMono; opacity: 0.6
                         }
                         Item { Layout.fillWidth: true }
                         Text {
                             text: "↑↓ nav"
                             color: root.walColor8; font.pixelSize: 9
-                            font.family: "JetBrainsMono Nerd Font"; opacity: 0.6
+                            font.family: root.fontMono; opacity: 0.6
                         }
                         Item { Layout.fillWidth: true }
                         Text {
                             text: "esc close"
                             color: root.walColor8; font.pixelSize: 9
-                            font.family: "JetBrainsMono Nerd Font"; opacity: 0.6
+                            font.family: root.fontMono; opacity: 0.6
                         }
                     }
                 }

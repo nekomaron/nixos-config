@@ -54,14 +54,14 @@ border.width: 1
 						text: "󰂯"
 						color: root.walColor5
 						font.pixelSize: 22
-						font.family: "JetBrainsMono Nerd Font"
+						font.family: root.fontMono
 					}
 					Text {
 						text: "Bluetooth"
 						color: root.walColor5
 						font.pixelSize: 16
 						font.bold: true
-						font.family: "JetBrainsMono Nerd Font"
+						font.family: root.fontMono
 					}
 					Item { 
 						Layout.fillWidth: true 
@@ -106,7 +106,7 @@ border.width: 1
 					text: "Paired Devices"
                     			color: root.walColor8
                     			font.pixelSize: 11
-                    			font.family: "JetBrainsMono Nerd Font"
+                    			font.family: root.fontMono
                     			visible: root.btEnabled
 				}
 				Rectangle {
@@ -141,7 +141,7 @@ border.width: 1
 									text: modelData.connected ? "󰂱" : "󰂲"
                                     					color: modelData.connected ? root.walColor2 : root.walColor8
                                     					font.pixelSize: 18
-                                    					font.family: "JetBrainsMono Nerd Font"
+                                    					font.family: root.fontMono
 								}
 								ColumnLayout {
 									Layout.fillWidth: true
@@ -151,7 +151,7 @@ border.width: 1
                                         					color: modelData.connected ? root.walColor2 : root.walForeground
                                         					font.pixelSize: 12
                                         					font.bold: modelData.connected
-                                        					font.family: "JetBrainsMono Nerd Font"
+                                        					font.family: root.fontMono
                                         					elide: Text.ElideRight
                                         					Layout.fillWidth: true
 									}
@@ -163,7 +163,7 @@ border.width: 1
 										}
 										color: root.walColor8
 										font.pixelSize: 9
-										font.family: "JetBrainsMono Nerd Font"
+										font.family: root.fontMono
 									}
 								}
 								Rectangle {
@@ -176,7 +176,7 @@ border.width: 1
 										text: modelData.connected ? "󰅖" : "󰐕"
 										color: modelData.connected ? root.walColor1 : root.walColor5
 										font.pixelSize: 12
-										font.family: "JetBrainsMono Nerd Font"
+										font.family: root.fontMono
 									}
 									MouseArea {
 										id: btConnBtnMa
@@ -201,7 +201,7 @@ border.width: 1
                                         					text: "󰆴"
                                         					color: root.walColor8
                                         					font.pixelSize: 12
-                                        					font.family: "JetBrainsMono Nerd Font"
+                                        					font.family: root.fontMono
 									}
 									MouseArea {
 										id: btForgetMa
@@ -236,7 +236,7 @@ border.width: 1
 						text: "No paired devices"
 						color: root.walColor8
 						font.pixelSize: 12
-						font.family: "JetBrainsMono Nerd Font"
+						font.family: root.fontMono
 					}
 				}
 				RowLayout {
@@ -246,7 +246,7 @@ border.width: 1
 						text: "Available Devices"
 						color: root.walColor8
 						font.pixelSize: 11
-						font.family: "JetBrainsMono Nerd Font"
+						font.family: root.fontMono
 					}
 					Item { 
 						Layout.fillWidth: true 
@@ -261,7 +261,7 @@ border.width: 1
 							text: root.btScanning ? "Scanning" : "Scan"
 							color: root.walColor5
 							font.pixelSize: 10
-							font.family: "JetBrainsMono Nerd Font"
+							font.family: root.fontMono
 						}
 						MouseArea {
 							id: btScanBtnMa
@@ -310,13 +310,13 @@ border.width: 1
 									text: "󰂲"
                                     					color: root.walColor8
                                     					font.pixelSize: 16
-                                    					font.family: "JetBrainsMono Nerd Font"
+                                    					font.family: root.fontMono
 								}
 								Text {
 									text: modelData.name
                                     					color: root.walForeground
                                     					font.pixelSize: 12
-                                    					font.family: "JetBrainsMono Nerd Font"
+                                    					font.family: root.fontMono
                                     					elide: Text.ElideRight
                                     					Layout.fillWidth: true
 								}
@@ -325,7 +325,7 @@ border.width: 1
 									text: "..."
                                     					color: root.walColor8
                                     					font.pixelSize: 12
-                                    					font.family: "JetBrainsMono Nerd Font"
+                                    					font.family: root.fontMono
 								}
 							}
 							MouseArea {
@@ -347,7 +347,7 @@ border.width: 1
                         			text: "Press Scan to find devices"
                         			color: root.walColor8
                         			font.pixelSize: 11
-                        			font.family: "JetBrainsMono Nerd Font"
+                        			font.family: root.fontMono
 					}
 					Text {
 						anchors.centerIn: parent
@@ -355,7 +355,7 @@ border.width: 1
                         			text: "Scanning..."
                         			color: root.walColor8
                         			font.pixelSize: 11
-                        			font.family: "JetBrainsMono Nerd Font"
+                        			font.family: root.fontMono
 					}
 				}
 				Rectangle {
@@ -368,7 +368,7 @@ border.width: 1
                         			text: "Bluetooth is off"
                         			color: root.walColor8
                         			font.pixelSize: 13
-                        			font.family: "JetBrainsMono Nerd Font"
+                        			font.family: root.fontMono
 					}
 				}
 			}

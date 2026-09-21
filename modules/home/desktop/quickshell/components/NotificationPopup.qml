@@ -198,7 +198,7 @@ PanelWindow {
                                 				color: a(Colors.accent, 0.6)
 								font { 
 									pixelSize: 8; 
-									family: "JetBrainsMono Nerd Font"; 
+									family: root.fontMono; 
 									bold: true; 
 									letterSpacing: 1.2 
 								}
@@ -210,7 +210,7 @@ PanelWindow {
                             				color: Colors.fg
 							font { 
 								pixelSize: 11; 
-								family: "JetBrainsMono Nerd Font";
+								family: root.fontMono;
 								bold: true 
 							}
 							width: parent.width
@@ -224,7 +224,7 @@ PanelWindow {
                             				color:   a(Colors.fg, 0.45)
                             				font { 
 								pixelSize: 10; 
-								family: "JetBrainsMono Nerd Font" 
+								family: root.fontMono 
 							}
 							width: parent.width
 							wrapMode: Text.WordWrap
@@ -251,7 +251,7 @@ PanelWindow {
 						color: dismissMa.containsMouse ? Colors.red : a(Colors.fg, 0.25)
 						font { 
 							pixelSize: 11; 
-							family: "JetBrainsMono Nerd Font" 
+							family: root.fontMono 
 						}
 						opacity: wrapper.hovered ? 1 : 0
 						Behavior on opacity { 

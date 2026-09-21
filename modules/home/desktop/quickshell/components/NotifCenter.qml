@@ -84,7 +84,7 @@ border.width: 1
                         			color: root.walColor5
                         			font { 
 							pixelSize: 18; 
-							family: "JetBrainsMono Nerd Font" 
+							family: root.fontMono 
 						}
 					}
 					Text {
@@ -93,7 +93,7 @@ border.width: 1
                         			font {
 							pixelSize: 15
                             				bold: true
-                            				family: "JetBrainsMono Nerd Font"
+                            				family: root.fontMono
 						}
 						Layout.fillWidth: true
 					}
@@ -116,7 +116,7 @@ border.width: 1
                             				font {
 								pixelSize: 10
                                 				bold: true
-                                				family: "JetBrainsMono Nerd Font"
+                                				family: root.fontMono
 							}
 						}
 					}
@@ -177,7 +177,7 @@ border.width: 1
                             					color: clearMa.containsMouse ? root.walColor1 : root.walColor8
                             					font { 
 									pixelSize: 14; 
-									family: "JetBrainsMono Nerd Font" 
+									family: root.fontMono 
 								}
 								Behavior on color { 
 									ColorAnimation {
@@ -213,7 +213,7 @@ border.width: 1
                             					color: root.walColor1
                             					font { 
 									pixelSize: 12; 
-									family: "JetBrainsMono Nerd Font" 
+									family: root.fontMono 
 								}
 							}
 							Text {
@@ -221,7 +221,7 @@ border.width: 1
                             					color: root.walColor1
                             					font { 
 									pixelSize: 10; 
-									family: "JetBrainsMono Nerd Font" 
+									family: root.fontMono 
 								}
 							}
 						}
@@ -242,7 +242,7 @@ border.width: 1
                             					color: root.walColor8
                             					font { 
 									pixelSize: 32; 
-									family: "JetBrainsMono Nerd Font" 
+									family: root.fontMono 
 								}
 								opacity: 0.3
 							}
@@ -252,7 +252,7 @@ border.width: 1
                             					color: root.walColor8
                             					font { 
 									pixelSize: 12; 
-									family: "JetBrainsMono Nerd Font" 
+									family: root.fontMono 
 								}
 								opacity: 0.5
 							}
@@ -312,7 +312,7 @@ border.width: 1
 												font {
 												pixelSize: 8
                                             							bold: true
-                                            							family: "JetBrainsMono Nerd Font"
+                                            							family: root.fontMono
                                             							letterSpacing: 1.0
 												}
 											}
@@ -324,7 +324,7 @@ border.width: 1
                                         							color: root.walColor8
 												font {
 												pixelSize: 8
-                                            							family: "JetBrainsMono Nerd Font"
+                                            							family: root.fontMono
 												}
 												opacity: 0.6
 											}
@@ -336,7 +336,7 @@ border.width: 1
 											font {
 												pixelSize: 11
                                         							bold: true
-                                        							family: "JetBrainsMono Nerd Font"
+                                        							family: root.fontMono
 											}
 											wrapMode: Text.WordWrap
                                     							maximumLineCount: 2
@@ -354,7 +354,7 @@ border.width: 1
 											)
 											font {
 												pixelSize: 10
-												family: "JetBrainsMono Nerd Font"
+												family: root.fontMono
 											}
 											wrapMode: Text.WordWrap
                                     							maximumLineCount: 3
@@ -380,7 +380,7 @@ border.width: 1
 											)
 											font { 
 												pixelSize: 10; 
-												family: "JetBrainsMono Nerd Font" 
+												family: root.fontMono 
 											}
 											opacity: itemMa.containsMouse ? 1.0 : 0.0
 											Behavior on opacity { 
@@ -429,7 +429,7 @@ border.width: 1
 										color: root.walColor8
                             							font { 
 											pixelSize: 9; 
-											family: "JetBrainsMono Nerd Font" 
+											family: root.fontMono 
 										}
 										opacity: 0.6
 									}
@@ -441,7 +441,7 @@ border.width: 1
                             							color: root.walColor8
                             							font { 
 											pixelSize: 9; 
-											family: "JetBrainsMono Nerd Font" 
+											family: root.fontMono 
 										}
 										opacity: 0.6
 									}

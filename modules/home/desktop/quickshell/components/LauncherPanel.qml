@@ -68,14 +68,14 @@ PanelWindow {
 								text: "󰀻"
                                 				color: root.activeTab === 0 ? root.walColor5 : root.walColor8
                                					font.pixelSize: 14
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
 							}
 							Text {
 								text: "Apps"
                                 				color: root.activeTab === 0 ? root.walColor5 : root.walColor8
                                 				font.pixelSize: 13
                                 				font.bold: root.activeTab === 0
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
 							}
 						}
 						MouseArea {
@@ -109,14 +109,14 @@ PanelWindow {
 								text: "󰸉"
 								color: root.activeTab === 1 ? root.walColor13 : root.walColor8
                                 				font.pixelSize: 14
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
 							}
 							Text {
 								text: "Walls"
                                 				color: root.activeTab === 1 ? root.walColor13 : root.walColor8
                                 				font.pixelSize: 13
                                 				font.bold: root.activeTab === 1
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
 							}
 						}
 						MouseArea {
@@ -161,7 +161,7 @@ PanelWindow {
 								text: ""
                                 				color: root.walColor8
                                 				font.pixelSize: 14
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
 							}
 							TextInput {
 								id: searchInput
@@ -169,7 +169,7 @@ PanelWindow {
                                 				Layout.fillHeight: true
                                 				color: root.walForeground
                                 				font.pixelSize: 14
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
                                 				verticalAlignment: TextInput.AlignVCenter
                                 				selectByMouse: true
                                 				clip: true
@@ -217,7 +217,7 @@ PanelWindow {
                                 				text: "󰅖"
                                 				color: root.walColor8
                                 				font.pixelSize: 12
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
                                 				opacity: clearAppMouse.containsMouse ? 1.0 : 0.7
                                 				Behavior on opacity { 
 									NumberAnimation { 
@@ -359,7 +359,7 @@ PanelWindow {
                                             						text: modelData.name
                                             						color: index === root.selectedIndex ? root.walColor5 : root.walForeground
                                             						font.pixelSize: 13
-                                            						font.family: "JetBrainsMono Nerd Font"
+                                            						font.family: root.fontMono
                                             						font.bold: index === root.selectedIndex
                                             						elide: Text.ElideRight
                                             						Behavior on color { 
@@ -373,7 +373,7 @@ PanelWindow {
                                             						text: modelData.exec
                                             						color: root.walColor8
                                             						font.pixelSize: 9
-                                            						font.family: "JetBrainsMono Nerd Font"
+                                            						font.family: root.fontMono
                                             						elide: Text.ElideRight
                                             						opacity: 0.7
 										}
@@ -383,7 +383,7 @@ PanelWindow {
                                         					text: "↵"
                                         					color: root.walColor5
                                         					font.pixelSize: 14
-                                        					font.family: "JetBrainsMono Nerd Font"
+                                        					font.family: root.fontMono
                                        						font.bold: true
 									}
 								}
@@ -410,7 +410,7 @@ PanelWindow {
                             				text: "No apps found"
                             				color: root.walColor8
                             				font.pixelSize: 14
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
 						}
 					}
 					Rectangle {
@@ -426,7 +426,7 @@ PanelWindow {
 								text: "↑↓ nav"; 
 								color: root.walColor8; 
 								font.pixelSize: 10; 
-								font.family: "JetBrainsMono Nerd Font"; 
+								font.family: root.fontMono; 
 								opacity: 0.7 
 							}
 							Item { 
@@ -436,7 +436,7 @@ PanelWindow {
 								text: "↵ launch"; 
 								color: root.walColor8; 
 								font.pixelSize: 10; 
-								font.family: "JetBrainsMono Nerd Font"; 
+								font.family: root.fontMono; 
 								opacity: 0.7 
 							}
 							Item { 
@@ -446,7 +446,7 @@ PanelWindow {
 								text: "tab walls"; 
 								color: root.walColor8; 
 								font.pixelSize: 10; 
-								font.family: "JetBrainsMono Nerd Font"; 
+								font.family: root.fontMono; 
 								opacity: 0.7 
 							}
 							Item { 
@@ -456,7 +456,7 @@ PanelWindow {
 								text: "esc close"; 
 								color: root.walColor8; 
 								font.pixelSize: 10; 
-								font.family: "JetBrainsMono Nerd Font"; 
+								font.family: root.fontMono; 
 								opacity: 0.7 
 							}
 						}
@@ -489,7 +489,7 @@ PanelWindow {
 								text: ""
 								color: root.walColor8
                                 				font.pixelSize: 14
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
 							}
 							TextInput {
 								id: wallSearchInput
@@ -497,7 +497,7 @@ PanelWindow {
                                 				Layout.fillHeight: true
                                 				color: root.walForeground
                                 				font.pixelSize: 14
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
                                 				verticalAlignment: TextInput.AlignVCenter
                                 				selectByMouse: true
                                 				clip: true
@@ -554,7 +554,7 @@ PanelWindow {
                                 				text: "󰅖"
                                 				color: root.walColor8
                                 				font.pixelSize: 12
-                                				font.family: "JetBrainsMono Nerd Font"
+                                				font.family: root.fontMono
                                 				opacity: clearWallMouse.containsMouse ? 1.0 : 0.7
                                 				Behavior on opacity { 
 									NumberAnimation { 
@@ -714,7 +714,7 @@ PanelWindow {
                                                     						text: "󰄬"
                                                     						color: root.walBackground
                                                     						font.pixelSize: 10
-                                                    						font.family: "JetBrainsMono Nerd Font"
+                                                    						font.family: root.fontMono
 												}
 											}
 										}
@@ -728,7 +728,7 @@ PanelWindow {
                                                 						return root.walForeground
 											}
 											font.pixelSize: 8
-                                            						font.family: "JetBrainsMono Nerd Font"
+                                            						font.family: root.fontMono
                                            						font.bold: index === root.wallSelectedIndex || modelData.path === root.currentWallpaper
                                             						elide: Text.ElideMiddle
                                             						horizontalAlignment: Text.AlignHCenter
@@ -764,7 +764,7 @@ PanelWindow {
                             				text: "No wallpapers found"
                             				color: root.walColor8
                             				font.pixelSize: 14
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
 						}
 						Text {
 							anchors.centerIn: parent
@@ -772,7 +772,7 @@ PanelWindow {
                             				text: "Loading..."
                             				color: root.walColor8
                             				font.pixelSize: 13
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
                             				SequentialAnimation on opacity {
 								loops: Animation.Infinite
                                 				NumberAnimation { 
@@ -803,7 +803,7 @@ PanelWindow {
 								text: "←→↑↓ nav"; 
 								color: root.walColor8; 
 								font.pixelSize: 10; 
-								font.family: "JetBrainsMono Nerd Font"; opacity: 0.7 
+								font.family: root.fontMono; opacity: 0.7 
 							}
 							Item { 
 								Layout.fillWidth: true 
@@ -812,7 +812,7 @@ PanelWindow {
 								text: "↵ apply"; 
 								color: root.walColor8; 
 								font.pixelSize: 10; 
-								font.family: "JetBrainsMono Nerd Font"; 
+								font.family: root.fontMono; 
 								opacity: 0.7 
 							}
                             				Item { 
@@ -822,7 +822,7 @@ PanelWindow {
 								text: "tab apps"; 
 								color: root.walColor8; 
 								font.pixelSize: 10; 
-								font.family: "JetBrainsMono Nerd Font"; 
+								font.family: root.fontMono; 
 								opacity: 0.7 
 							}
 							Item { 
@@ -832,7 +832,7 @@ PanelWindow {
 								text: "esc close"; 
 								color: root.walColor8; 
 								font.pixelSize: 10; 
-								font.family: "JetBrainsMono Nerd Font"; 
+								font.family: root.fontMono; 
 								opacity: 0.7 
 							}
 						}

@@ -272,7 +272,7 @@ Rectangle {
             text: notchRoot.tooltip
             color: root.walForeground
             font.pixelSize: 10
-            font.family: "JetBrainsMono Nerd Font"
+            font.family: root.fontMono
         }
 	}
 
@@ -301,7 +301,7 @@ Rectangle {
 						text: "󱄅"
                         			color: root.walColor13
                         			font.pixelSize: 16
-                        			font.family: "JetBrainsMono Nerd Font"
+                        			font.family: root.fontMono
 					}
 				}
 				MouseArea {
@@ -341,7 +341,7 @@ Rectangle {
 			              color: root.walColor5
 			              font.pixelSize: 11
 			              font.bold: true
-			              font.family: "JetBrainsMono Nerd Font"
+			              font.family: root.fontMono
 			          }
 			          Rectangle {
 			              width: 1
@@ -356,7 +356,7 @@ Rectangle {
 			              color: root.walColor5
 						font.pixelSize: 11
 						font.bold: true
-						font.family: "JetBrainsMono Nerd Font"
+						font.family: root.fontMono
 			          }
 			      }
 			  }
@@ -472,7 +472,7 @@ Notch {
                                     : Qt.rgba(root.walForeground.r, root.walForeground.g, root.walForeground.b, 0.35)
                             font.pixelSize: 10
                             font.bold: true
-                            font.family: "JetBrainsMono Nerd Font"
+                            font.family: root.fontMono
                             Behavior on color {
                                 ColorAnimation { duration: 200; easing.type: Easing.OutCubic }
                             }
@@ -565,7 +565,7 @@ Notch {
 					  color: root.walColor13
 					  font.pixelSize: 10
 					  font.bold: true
-					  font.family: "JetBrainsMono Nerd Font"
+					  font.family: root.fontMono
 					  opacity: 1.0
 					  Behavior on opacity {
 					      NumberAnimation {
@@ -644,7 +644,7 @@ Notch {
                         			color: bar.volumeMuted ? root.walColor8 : root.walColor5
                         			font.pixelSize: 11
                         			font.bold: true
-                        			font.family: "JetBrainsMono Nerd Font"
+                        			font.family: root.fontMono
 						Behavior on color { 
 							ColorAnimation { 
 								duration: 200; 
@@ -683,14 +683,14 @@ Notch {
         text: "󰈀"
         color: root.walColor2
         font.pixelSize: 14
-        font.family: "JetBrainsMono Nerd Font"
+        font.family: root.fontMono
     }
 						Text {
 							anchors.verticalCenter: parent.verticalCenter
 							text: bar.btConnected ? "󰂱" : "󰂲"
                             				color: bar.btConnected ? root.walColor5 : root.walColor8
                             				font.pixelSize: 13
-                            				font.family: "JetBrainsMono Nerd Font"
+                            				font.family: root.fontMono
 							Behavior on color { 
 								ColorAnimation { 
 									duration: 300; 
@@ -821,7 +821,7 @@ Notch {
 									text: "󰀻"
 									color: root.walColor8
 									font.pixelSize: 12
-									font.family: "JetBrainsMono Nerd Font"
+									font.family: root.fontMono
 								}
 
 								MouseArea {
@@ -867,7 +867,7 @@ Notch {
               				text: "󰅍"
               				color: root.walColor13
               				font.pixelSize: 15
-              				font.family: "JetBrainsMono Nerd Font"
+              				font.family: root.fontMono
 					}
 				}
 				MouseArea {
@@ -889,7 +889,7 @@ Notch {
 					text: "󰕮"
 					color: root.walColor13
 					font.pixelSize: 15
-					font.family: "JetBrainsMono Nerd Font"
+					font.family: root.fontMono
 				}
 			}
 			MouseArea {

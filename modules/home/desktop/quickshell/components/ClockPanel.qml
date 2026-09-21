@@ -234,7 +234,7 @@ border.width: 1
 								Text {
 									anchors.centerIn: parent; text: modelData
 									color: clockPanel.activeTab === index ? root.walColor5 : root.walColor8
-									font.pixelSize: 14; font.family: "JetBrainsMono Nerd Font"
+									font.pixelSize: 14; font.family: root.fontMono
 									Behavior on color { ColorAnimation { duration: 150 } }
 								}
 								MouseArea {
@@ -316,13 +316,13 @@ border.width: 1
 						anchors.horizontalCenter: parent.horizontalCenter
 						text: clockPanel.clockTime
 						color: root.walForeground
-						font.pixelSize: 28; font.bold: true; font.family: "JetBrainsMono Nerd Font"
+						font.pixelSize: 28; font.bold: true; font.family: root.fontMono
 					}
 					Text {
 						anchors.horizontalCenter: parent.horizontalCenter
 						text: clockPanel.clockDate
 						color: Qt.rgba(root.walForeground.r, root.walForeground.g, root.walForeground.b, 0.55)
-						font.pixelSize: 11; font.family: "JetBrainsMono Nerd Font"
+						font.pixelSize: 11; font.family: root.fontMono
 					}
 					Item { height: 4 }
 				}
@@ -353,7 +353,7 @@ border.width: 1
 							anchors.centerIn: parent
 							text: clockPanel.timerDisplayStr()
 							color: clockPanel.timerState === "finished" ? root.walColor1 : root.walForeground
-							font.pixelSize: 24; font.bold: true; font.family: "JetBrainsMono Nerd Font"
+							font.pixelSize: 24; font.bold: true; font.family: root.fontMono
 						}
 					}
 
@@ -374,7 +374,7 @@ border.width: 1
 									Text {
 										anchors.centerIn: parent
 										text: modelData.v < 10 ? "0" + modelData.v : "" + modelData.v
-										color: root.walForeground; font.pixelSize: 20; font.bold: true; font.family: "JetBrainsMono Nerd Font"
+										color: root.walForeground; font.pixelSize: 20; font.bold: true; font.family: root.fontMono
 									}
 									MouseArea {
 										anchors.fill: parent; cursorShape: Qt.PointingHandCursor
@@ -394,7 +394,7 @@ border.width: 1
 								Text {
 									anchors.horizontalCenter: parent.horizontalCenter
 									text: modelData.l; color: root.walColor8
-									font.pixelSize: 9; font.family: "JetBrainsMono Nerd Font"
+									font.pixelSize: 9; font.family: root.fontMono
 								}
 							}
 						}
@@ -407,7 +407,7 @@ border.width: 1
 							visible: clockPanel.timerState !== "idle"
 							color: rTMa.containsMouse ? Qt.rgba(root.walColor1.r,root.walColor1.g,root.walColor1.b,0.22) : Qt.rgba(0,0,0,0.3)
 							Behavior on color { ColorAnimation { duration: 120 } }
-							Text { anchors.centerIn: parent; text: "Reset"; color: root.walColor1; font.pixelSize: 11; font.family: "JetBrainsMono Nerd Font" }
+							Text { anchors.centerIn: parent; text: "Reset"; color: root.walColor1; font.pixelSize: 11; font.family: root.fontMono }
 							MouseArea { id: rTMa; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: clockPanel.resetTimer() }
 						}
 						Rectangle {
@@ -418,7 +418,7 @@ border.width: 1
 							Text {
 								anchors.centerIn: parent
 								text: clockPanel.timerState==="idle" ? "Start" : clockPanel.timerState==="running" ? "Pause" : clockPanel.timerState==="paused" ? "Resume" : "Restart"
-								color: root.walForeground; font.pixelSize: 11; font.bold: true; font.family: "JetBrainsMono Nerd Font"
+								color: root.walForeground; font.pixelSize: 11; font.bold: true; font.family: root.fontMono
 							}
 							MouseArea { id: sTMa; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: clockPanel.toggleTimer() }
 						}
@@ -467,7 +467,7 @@ border.width: 1
 							anchors.centerIn: parent
 							text: clockPanel.msToDisplay(clockPanel.swElapsedMs)
 							color: root.walForeground
-							font.pixelSize: 20; font.bold: true; font.family: "JetBrainsMono Nerd Font"
+							font.pixelSize: 20; font.bold: true; font.family: root.fontMono
 						}
 					}
 
@@ -480,8 +480,8 @@ border.width: 1
 								width: parent ? parent.width : 0; height: 22; radius: 6; color: Qt.rgba(0,0,0,0.2)
 								Row {
 									anchors.fill: parent; anchors.leftMargin: 10; anchors.rightMargin: 10
-									Text { width: 28; text: "L"+clockPanel.swLaps[index].num; color: root.walColor8; font.pixelSize: 9; font.family: "JetBrainsMono Nerd Font"; anchors.verticalCenter: parent.verticalCenter }
-									Text { text: clockPanel.msToDisplay(clockPanel.swLaps[index].lapMs); color: root.walForeground; font.pixelSize: 9; font.family: "JetBrainsMono Nerd Font"; anchors.verticalCenter: parent.verticalCenter }
+									Text { width: 28; text: "L"+clockPanel.swLaps[index].num; color: root.walColor8; font.pixelSize: 9; font.family: root.fontMono; anchors.verticalCenter: parent.verticalCenter }
+									Text { text: clockPanel.msToDisplay(clockPanel.swLaps[index].lapMs); color: root.walForeground; font.pixelSize: 9; font.family: root.fontMono; anchors.verticalCenter: parent.verticalCenter }
 								}
 							}
 						}
@@ -494,7 +494,7 @@ border.width: 1
 							visible: clockPanel.swElapsedMs > 0 && !clockPanel.swRunning
 							color: swRMa.containsMouse ? Qt.rgba(root.walColor1.r,root.walColor1.g,root.walColor1.b,0.22) : Qt.rgba(0,0,0,0.3)
 							Behavior on color { ColorAnimation { duration: 120 } }
-							Text { anchors.centerIn: parent; text: "Reset"; color: root.walColor1; font.pixelSize: 11; font.family: "JetBrainsMono Nerd Font" }
+							Text { anchors.centerIn: parent; text: "Reset"; color: root.walColor1; font.pixelSize: 11; font.family: root.fontMono }
 							MouseArea { id: swRMa; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: clockPanel.resetStopwatch() }
 						}
 						Rectangle {
@@ -502,7 +502,7 @@ border.width: 1
 							visible: clockPanel.swRunning
 							color: swLMa.containsMouse ? Qt.rgba(root.walColor4.r,root.walColor4.g,root.walColor4.b,0.22) : Qt.rgba(0,0,0,0.3)
 							Behavior on color { ColorAnimation { duration: 120 } }
-							Text { anchors.centerIn: parent; text: "Lap"; color: root.walColor4; font.pixelSize: 11; font.family: "JetBrainsMono Nerd Font" }
+							Text { anchors.centerIn: parent; text: "Lap"; color: root.walColor4; font.pixelSize: 11; font.family: root.fontMono }
 							MouseArea { id: swLMa; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: clockPanel.lapStopwatch() }
 						}
 						Rectangle {
@@ -512,7 +512,7 @@ border.width: 1
 							Text {
 								anchors.centerIn: parent
 								text: clockPanel.swRunning ? "Pause" : (clockPanel.swElapsedMs > 0 ? "Resume" : "Start")
-								color: root.walForeground; font.pixelSize: 11; font.bold: true; font.family: "JetBrainsMono Nerd Font"
+								color: root.walForeground; font.pixelSize: 11; font.bold: true; font.family: root.fontMono
 							}
 							MouseArea {
 								id: swSMa; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor
@@ -544,7 +544,7 @@ border.width: 1
 									Text {
 										text: modelData.time
 										color: modelData.enabled ? root.walForeground : root.walColor8
-										font.pixelSize: 18; font.bold: modelData.enabled; font.family: "JetBrainsMono Nerd Font"
+										font.pixelSize: 18; font.bold: modelData.enabled; font.family: root.fontMono
 									}
 									Item { Layout.fillWidth: true }
 									Rectangle {
@@ -561,7 +561,7 @@ border.width: 1
 									Rectangle {
 										width: 24; height: 24; radius: 6
 										color: aDelMa.containsMouse ? Qt.rgba(root.walColor1.r,root.walColor1.g,root.walColor1.b,0.2) : "transparent"
-										Text { anchors.centerIn: parent; text: "󰆴"; color: root.walColor1; font.pixelSize: 12; font.family: "JetBrainsMono Nerd Font" }
+										Text { anchors.centerIn: parent; text: "󰆴"; color: root.walColor1; font.pixelSize: 12; font.family: root.fontMono }
 										MouseArea { id: aDelMa; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: clockPanel.removeAlarm(modelData.id) }
 									}
 								}
@@ -569,7 +569,7 @@ border.width: 1
 						}
 						Text {
 							anchors.centerIn: parent; visible: clockPanel.alarms.length === 0
-							text: "No alarms set"; color: root.walColor8; font.pixelSize: 11; font.family: "JetBrainsMono Nerd Font"
+							text: "No alarms set"; color: root.walColor8; font.pixelSize: 11; font.family: root.fontMono
 						}
 					}
 
@@ -582,25 +582,25 @@ border.width: 1
 						RowLayout {
 							anchors.fill: parent; anchors.margins: 8; spacing: 6
 							visible: clockPanel.alarmAddMode
-							Text { text: "󰂟"; color: root.walColor5; font.pixelSize: 14; font.family: "JetBrainsMono Nerd Font" }
+							Text { text: "󰂟"; color: root.walColor5; font.pixelSize: 14; font.family: root.fontMono }
 							Rectangle {
 								width: 44; height: 28; radius: 6; color: Qt.rgba(0,0,0,0.3)
 								TextInput {
 									anchors.centerIn: parent; width: parent.width-8
 									text: clockPanel.alarmHourInput; onTextChanged: clockPanel.alarmHourInput = text
-									color: root.walForeground; font.pixelSize: 13; font.family: "JetBrainsMono Nerd Font"
+									color: root.walForeground; font.pixelSize: 13; font.family: root.fontMono
 									horizontalAlignment: TextInput.AlignHCenter; maximumLength: 2
 									validator: IntValidator { bottom: 0; top: 23 }
 									Text { anchors.centerIn: parent; text: "HH"; color: root.walColor8; visible: !parent.text; font: parent.font }
 								}
 							}
-							Text { text: ":"; color: root.walColor8; font.pixelSize: 14; font.family: "JetBrainsMono Nerd Font" }
+							Text { text: ":"; color: root.walColor8; font.pixelSize: 14; font.family: root.fontMono }
 							Rectangle {
 								width: 44; height: 28; radius: 6; color: Qt.rgba(0,0,0,0.3)
 								TextInput {
 									anchors.centerIn: parent; width: parent.width-8
 									text: clockPanel.alarmMinInput; onTextChanged: clockPanel.alarmMinInput = text
-									color: root.walForeground; font.pixelSize: 13; font.family: "JetBrainsMono Nerd Font"
+									color: root.walForeground; font.pixelSize: 13; font.family: root.fontMono
 									horizontalAlignment: TextInput.AlignHCenter; maximumLength: 2
 									validator: IntValidator { bottom: 0; top: 59 }
 									Keys.onReturnPressed: clockPanel.addAlarm()
@@ -611,13 +611,13 @@ border.width: 1
 							Rectangle {
 								width: 28; height: 28; radius: 8
 								color: cMa.containsMouse ? Qt.rgba(root.walColor2.r,root.walColor2.g,root.walColor2.b,0.3) : Qt.rgba(root.walColor2.r,root.walColor2.g,root.walColor2.b,0.15)
-								Text { anchors.centerIn: parent; text: "󰄬"; color: root.walColor2; font.pixelSize: 12; font.family: "JetBrainsMono Nerd Font" }
+								Text { anchors.centerIn: parent; text: "󰄬"; color: root.walColor2; font.pixelSize: 12; font.family: root.fontMono }
 								MouseArea { id: cMa; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: clockPanel.addAlarm() }
 							}
 							Rectangle {
 								width: 28; height: 28; radius: 8
 								color: xMa.containsMouse ? Qt.rgba(root.walColor1.r,root.walColor1.g,root.walColor1.b,0.2) : "transparent"
-								Text { anchors.centerIn: parent; text: "󰅖"; color: root.walColor8; font.pixelSize: 12; font.family: "JetBrainsMono Nerd Font" }
+								Text { anchors.centerIn: parent; text: "󰅖"; color: root.walColor8; font.pixelSize: 12; font.family: root.fontMono }
 								MouseArea { id: xMa; anchors.fill: parent; hoverEnabled: true; cursorShape: Qt.PointingHandCursor; onClicked: clockPanel.alarmAddMode = false }
 							}
 						}
@@ -625,9 +625,9 @@ border.width: 1
 						RowLayout {
 							anchors.fill: parent; anchors.leftMargin: 12; anchors.rightMargin: 12
 							visible: !clockPanel.alarmAddMode
-							Text { text: "Add alarm"; color: root.walColor8; font.pixelSize: 11; font.family: "JetBrainsMono Nerd Font" }
+							Text { text: "Add alarm"; color: root.walColor8; font.pixelSize: 11; font.family: root.fontMono }
 							Item { Layout.fillWidth: true }
-							Text { text: ""; color: root.walColor5; font.pixelSize: 14; font.family: "JetBrainsMono Nerd Font" }
+							Text { text: ""; color: root.walColor5; font.pixelSize: 14; font.family: root.fontMono }
 						}
 						MouseArea {
 							anchors.fill: parent; visible: !clockPanel.alarmAddMode; cursorShape: Qt.PointingHandCursor
@@ -639,8 +639,8 @@ border.width: 1
 						width: parent.width; height: 22; radius: 8; color: Qt.rgba(0,0,0,0.2)
 						Row {
 							anchors.centerIn: parent; spacing: 5
-							Text { text: "󰔊"; color: root.walColor8; font.pixelSize: 10; font.family: "JetBrainsMono Nerd Font"; opacity: 0.6 }
-							Text { text: "24h · sound + notify on alarm"; color: root.walColor8; font.pixelSize: 9; font.family: "JetBrainsMono Nerd Font"; opacity: 0.6 }
+							Text { text: "󰔊"; color: root.walColor8; font.pixelSize: 10; font.family: root.fontMono; opacity: 0.6 }
+							Text { text: "24h · sound + notify on alarm"; color: root.walColor8; font.pixelSize: 9; font.family: root.fontMono; opacity: 0.6 }
 						}
 					}
 					Item { height: 4 }
@@ -651,11 +651,11 @@ border.width: 1
 						anchors.fill: parent; anchors.leftMargin: 10; anchors.rightMargin: 10
 						Text {
 							text: clockPanel.activeTab===1||clockPanel.activeTab===2 ? "space  start/pause" : ""
-							color: root.walColor8; font.pixelSize: 9; font.family: "JetBrainsMono Nerd Font"; opacity: 0.6
+							color: root.walColor8; font.pixelSize: 9; font.family: root.fontMono; opacity: 0.6
 							visible: text !== ""
 						}
 						Item { Layout.fillWidth: true }
-						Text { text: "esc  close"; color: root.walColor8; font.pixelSize: 9; font.family: "JetBrainsMono Nerd Font"; opacity: 0.6 }
+						Text { text: "esc  close"; color: root.walColor8; font.pixelSize: 9; font.family: root.fontMono; opacity: 0.6 }
 					}
 				}
 				Item { Layout.preferredHeight: 4 }
