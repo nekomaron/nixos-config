@@ -7,16 +7,20 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, quickshell,... }:
     let
       username = "testuser";
     in
     {
       nixosConfigurations.test-vm = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit username; };
+        specialArgs = { inherit username  quickshell; };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
