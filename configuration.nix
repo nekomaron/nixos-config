@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 
 {
   imports = [
@@ -7,8 +7,8 @@
 
   system.stateVersion = "25.11";
 
-  users.users.testuser = {
+  users.users.${username} = {
     isNormalUser = true;
-    password = "test";
+    initialPassword = "test";
   };
 }
