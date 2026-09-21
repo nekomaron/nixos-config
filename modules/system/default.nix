@@ -6,5 +6,7 @@
     ./display
     ./networking
     ./services
+    
+    ./fonts.nix
   ];
 }

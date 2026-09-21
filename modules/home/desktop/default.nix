@@ -1,10 +1,18 @@
-{ pkgs, quickshell,... }:
+{ pkgs, quickshell,config, ... }:
 
+let
+  quickshellSrc = ../../../modules/home/desktop/quickshell;
+in
 {
   home.packages = [
-    pkgs.kitty
     quickshell.packages.${pkgs.system}.default
+    pkgs.playerctl
+    pkgs.swww
   ];
+
+  xdg.configFile."quickshell" = {
+    source = config.lib.file.mkOutOfStoreSymlink quickshellSrc;
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -15,8 +23,8 @@
         "$mod, Q, killactive"
       ];
       exec-once = [
-       "qs"
-       ];
+        "sh -c 'QML2_IMPORT_PATH=${pkgs.kdePackages.qt5compat}/lib/qt-6/qml:$QML2_IMPORT_PATH qs'"
+      ];
     };
   };
 }

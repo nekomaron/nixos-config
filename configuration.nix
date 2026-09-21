@@ -11,4 +11,13 @@
     isNormalUser = true;
     initialPassword = "test";
   };
+
+  virtualisation.vmVariant = {
+    virtualisation = {
+      memorySize = 4096;   # MB単位、4GB
+      cores = 4;
+      diskSize = 20480;    # MB単位、20GB
+    };
+  };
+
 }
