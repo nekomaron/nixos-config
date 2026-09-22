@@ -10,6 +10,8 @@ in
     pkgs.swww
     pkgs.libnotify
     (pkgs.python3.withPackages (ps: [ ps.dbus-python ps.pygobject3 ]))
+    pkgs.cliphist
+    pkgs.wl-clipboard
   ];
 
   xdg.configFile."quickshell" = {
@@ -26,6 +28,8 @@ in
       ];
       exec-once = [
         "sh -c 'QML2_IMPORT_PATH=${pkgs.kdePackages.qt5compat}/lib/qt-6/qml:$QML2_IMPORT_PATH qs'"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ];
     };
   };
