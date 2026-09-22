@@ -15,8 +15,8 @@ ShellRoot {
 	id: root
 	property string configPath: Quickshell.env("HOME") + "/.config/quickshell"
 	property string homePath: Quickshell.env("HOME")
-	property string wallpaperPath: homePath + "/wallpapers"
-	property string cachePath: homePath + "/.cache"
+    property string wallpaperPath: homePath + "/Pictures/system/wallpaper"
+    property string cachePath: homePath + "/.cache"
 	property string statePath: configPath + "/state"
 
 	// ── Monochrome — grayscale (static) ────────────────────────────────
