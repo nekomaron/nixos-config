@@ -31,6 +31,11 @@ in
         "$mod, Return, exec, kitty"
         "$mod, Q, killactive"
       ];
+
+      env = [
+        "SSH_AUTH_SOCK,$XDG_RUNTIME_DIR/ssh-agent"
+      ];
+
       exec-once = [
         "sh -c 'QML2_IMPORT_PATH=${pkgs.kdePackages.qt5compat}/lib/qt-6/qml:$QML2_IMPORT_PATH qs'"
         "wl-paste --type text --watch cliphist store"

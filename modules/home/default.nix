@@ -10,12 +10,20 @@
     ./shell
   ];
 
+
   home.username = username;
   home.homeDirectory = "/home/${username}";
   home.stateVersion = "25.11";
 
+  home.sessionVariables = {
+    SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/keepassxc-ssh-agent.socket";
+  };
+
   home.packages = [
     pkgs.kitty
     pkgs.firefox
+    pkgs.keepassxc
   ];
+
+  services.ssh-agent.enable = true;
 }
