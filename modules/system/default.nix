@@ -8,5 +8,6 @@
     ./services
     
     ./fonts.nix
+    ./bluetooth.nix
   ];
 }
