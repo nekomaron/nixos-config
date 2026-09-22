@@ -16,8 +16,14 @@
     pkgs.gtk3
   ];
 
+  environment.etc."greetd/background.jpeg".source = ./assets/default.jpeg;
+
   environment.etc."greetd/regreet.toml".text = ''
     skip_selection = true
+
+    [background]
+    path = "/etc/greetd/background.jpeg"
+    fit = "Cover"
 
     [GTK]
     icon_theme_name = "Adwaita"

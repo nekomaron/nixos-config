@@ -18,6 +18,9 @@ in
     source = config.lib.file.mkOutOfStoreSymlink quickshellSrc;
   };
 
+  home.file."Pictures/system/greetd-assets".source =
+    config.lib.file.mkOutOfStoreSymlink ../../../modules/system/display/assets;
+
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
