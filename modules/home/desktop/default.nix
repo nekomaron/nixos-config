@@ -8,6 +8,8 @@ in
     quickshell.packages.${pkgs.system}.default
     pkgs.playerctl
     pkgs.swww
+    pkgs.libnotify
+    (pkgs.python3.withPackages (ps: [ ps.dbus-python ps.pygobject3 ]))
   ];
 
   xdg.configFile."quickshell" = {
