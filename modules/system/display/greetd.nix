@@ -19,6 +19,9 @@
   environment.etc."greetd/regreet.toml".text = ''
     skip_selection = true
 
+    [GTK]
+    icon_theme_name = "Adwaita"
+
     [widget.clock]
     format = "%Y-%m-%d %H:%M (%a)"
     resolution = "1000ms"
@@ -27,5 +30,6 @@
 
   systemd.tmpfiles.rules = [
     "d /var/log/regreet 0755 greeter greeter -"
+    "d /var/lib/regreet 0755 greeter greeter -"
   ];
 }

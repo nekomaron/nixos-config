@@ -10,6 +10,7 @@
   users.users.${username} = {
     isNormalUser = true;
     initialPassword = "test";
+     extraGroups = [ "wheel" ];
   };
 
   virtualisation.vmVariant = {
