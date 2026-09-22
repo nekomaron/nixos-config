@@ -1,24 +1,8 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  programs.hyprland.enable = true;
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-  };
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.cage}/bin/cage -s -- ${pkgs.regreet}/bin/regreet";
-        user = "greeter";
-      };
-    };
-  };
-
-  systemd.tmpfiles.rules = [
-    "d /var/log/regreet 0755 greeter greeter -"
+  imports = [
+    ./hyprland.nix
+    ./greetd.nix
   ];
 }

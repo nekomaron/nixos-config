@@ -7,6 +7,7 @@
     ./networking
     ./services
     
+    ./locale.nix
     ./fonts.nix
     ./bluetooth.nix
   ];
