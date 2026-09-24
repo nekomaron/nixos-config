@@ -8,6 +8,8 @@
     ./desktop
     ./dev
     ./shell
+    ./terminal
+    ./editor
   ];
 
 
@@ -20,7 +22,6 @@
   };
 
   home.packages = [
-    pkgs.kitty
     pkgs.firefox
     pkgs.keepassxc
   ];
