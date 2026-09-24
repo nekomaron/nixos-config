@@ -11,6 +11,7 @@
     isNormalUser = true;
     initialPassword = "test";
      extraGroups = [ "wheel" ];
+     shell = pkgs.zsh;
   };
 
   virtualisation.vmVariant = {

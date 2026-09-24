@@ -10,5 +10,6 @@
     ./locale.nix
     ./fonts.nix
     ./bluetooth.nix
+    ./shell.nix
   ];
 }
