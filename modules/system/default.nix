@@ -11,5 +11,6 @@
     ./fonts.nix
     ./bluetooth.nix
     ./shell.nix
+    ./filemanager.nix
   ];
 }

@@ -1,7 +1,5 @@
 { pkgs, username, ... }:
 
-# TODO: 未整理。Kitty/Firefoxはカテゴリが定まるまで一旦ここに置く。
-# 将来的にterminal/, browsers/等への切り出しを検討する。
 
 {
   imports = [
@@ -10,6 +8,9 @@
     ./shell
     ./terminal
     ./editor
+    ./browser
+    ./cli-tools
+    ./theming
   ];
 
 
@@ -22,7 +23,6 @@
   };
 
   home.packages = [
-    pkgs.firefox
     pkgs.keepassxc
   ];
 
