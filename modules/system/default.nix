@@ -13,5 +13,6 @@
     ./shell.nix
     ./filemanager.nix
     ./ime.nix
+    ./steam.nix
   ];
 }

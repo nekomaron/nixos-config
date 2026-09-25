@@ -75,6 +75,11 @@ in
         "wl-paste --type image --watch cliphist store"
         "fcitx5 -d"
       ];
+
+       windowrulev2 = [
+      "float, class:^(steam)$"
+      "fullscreen, class:^(gamescope)$"
+    ];
     };
   };
 }
