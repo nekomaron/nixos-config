@@ -11,6 +11,7 @@
     ./browser
     ./cli-tools
     ./theming
+    ./screenshot
   ];
 
 

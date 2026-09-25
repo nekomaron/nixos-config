@@ -30,6 +30,11 @@ in
       bind = [
         "$mod, Return, exec, kitty"
         "$mod, Q, killactive"
+
+        # Screenshot
+        ", Print, exec, ~/.local/bin/screenshot.sh region"
+        "$mod SHIFT, 3, exec, ~/.local/bin/screenshot.sh full"
+        "$mod SHIFT, 4, exec, ~/.local/bin/screenshot.sh region"
       ];
 
       env = [
