@@ -210,13 +210,13 @@ ShellRoot {
 		root.launcherVisible = false
 	}
 
-	// ── Wallpaper application (swww + blur only, no wal) ─────────────────
+	// ── Wallpaper application (awww + blur only, no wal) ─────────────────
 	function applyWallpaper(wallpaper) {
 		root.currentWallpaper = wallpaper.path
 		root.walApplying = true
 		applyWallProc.command = ["bash", "-c",
 			"ln -sf '" + wallpaper.path + "' '" + root.wallpaperPath + "/current' && " +
-			"swww img '" + wallpaper.path + "' --transition-type any --transition-duration 2"]
+			"awww img '" + wallpaper.path + "' --transition-type any --transition-duration 2"]
 		applyWallProc.running = true
 	}
 

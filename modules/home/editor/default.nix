@@ -17,13 +17,14 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
+    withRuby = true;
+    withPython3 = true;
 
     plugins = with pkgs.vimPlugins; [
       catppuccin-nvim
       nvim-treesitter.withAllGrammars
       telescope-nvim
       plenary-nvim
-
       nvim-lspconfig
       nvim-cmp
       cmp-nvim-lsp
@@ -35,7 +36,7 @@
       fd
     ];
 
-    extraLuaConfig = ''
+    initLua = ''
       ${builtins.readFile ./lua/options.lua}
       ${builtins.readFile ./lua/keymaps.lua}
       ${builtins.readFile ./lua/telescope.lua}

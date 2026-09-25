@@ -7,7 +7,7 @@ in
   home.packages = [
     quickshell.packages.${pkgs.system}.default
     pkgs.playerctl
-    pkgs.swww
+    pkgs.awww
     pkgs.libnotify
     (pkgs.python3.withPackages (ps: [ ps.dbus-python ps.pygobject3 ]))
     pkgs.cliphist
@@ -19,28 +19,6 @@ in
   };
   
 
-  xdg.configFile."fcitx5/profile".text = ''
-    [Groups/0]
-    Name=Default
-    Default Layout=us
-    DefaultIM=mozc
-
-    [Groups/0/Items/0]
-    Name=keyboard-us
-    Layout=
-
-    [Groups/0/Items/1]
-    Name=mozc
-    Layout=
-
-    [GroupOrder]
-    0=Default
-  '';
-
-  xdg.configFile."fcitx5/config".text = ''
-    [Hotkey]
-    TriggerKeys=Control+space
-  '';
 
   home.file."Pictures/system/wallpaper/.keep".text = "";
 
@@ -49,6 +27,7 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
     settings = {
       "$mod" = "SUPER";
         bind = [
@@ -111,10 +90,10 @@ in
         "wl-paste --type image --watch cliphist store"
       ];
 
-       windowrulev2 = [
-      "float, class:^(steam)$"
-      "fullscreen, class:^(gamescope)$"
-    ];
+      windowrule = [
+        "match:class steam, float on"
+        "match:class gamescope, fullscreen on"
+      ];    
     };
   };
 }

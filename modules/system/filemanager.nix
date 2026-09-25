@@ -5,10 +5,10 @@ let
 in
 {
   environment.systemPackages = [
-    (mkJaWrapped pkgs.xfce.thunar [ "Thunar" "thunar" ])
-    pkgs.xfce.thunar-volman
-    pkgs.xfce.thunar-archive-plugin
-    pkgs.xfce.tumbler
+    (mkJaWrapped pkgs.thunar [ "Thunar" "thunar" ])
+    pkgs.thunar-volman
+    pkgs.thunar-archive-plugin
+    pkgs.tumbler
     pkgs.gvfs
   ];
 

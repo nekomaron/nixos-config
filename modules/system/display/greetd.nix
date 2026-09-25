@@ -11,6 +11,8 @@
     };
   };
 
+  services.accounts-daemon.enable = true;
+
   environment.systemPackages = [
     pkgs.adwaita-icon-theme
     pkgs.gtk3

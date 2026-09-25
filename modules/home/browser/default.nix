@@ -4,6 +4,7 @@
   programs.firefox = {
     enable = true;
     languagePacks = [ "en-US" "ja" ];
+    configPath = ".mozilla/firefox";
     profiles.default = {
       isDefault = true;
       settings = {
