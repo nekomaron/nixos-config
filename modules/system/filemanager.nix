@@ -1,8 +1,11 @@
 { pkgs, ... }:
 
+let
+  mkJaWrapped = import ../lib/ja-wrap.nix { inherit pkgs; };
+in
 {
   environment.systemPackages = [
-    pkgs.xfce.thunar
+    (mkJaWrapped pkgs.xfce.thunar [ "Thunar" "thunar" ])
     pkgs.xfce.thunar-volman
     pkgs.xfce.thunar-archive-plugin
     pkgs.xfce.tumbler

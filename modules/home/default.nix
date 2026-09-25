@@ -9,6 +9,7 @@
     ./terminal
     ./editor
     ./browser
+    ./apps.nix
     ./cli-tools
     ./theming
     ./screenshot
@@ -25,7 +26,6 @@
   };
 
   home.packages = [
-    pkgs.keepassxc
   ];
 
   services.ssh-agent.enable = true;
