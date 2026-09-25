@@ -15,8 +15,8 @@ ShellRoot {
 	id: root
 	property string configPath: Quickshell.env("HOME") + "/.config/quickshell"
 	property string homePath: Quickshell.env("HOME")
-    property string wallpaperPath: homePath + "/Pictures/system/wallpaper"
-    property string cachePath: homePath + "/.cache"
+	property string wallpaperPath: homePath + "/wallpapers"
+	property string cachePath: homePath + "/.cache"
 	property string statePath: configPath + "/state"
 
 	// ── Monochrome — grayscale (static) ────────────────────────────────
@@ -28,9 +28,6 @@ ShellRoot {
 	readonly property color walColor5:     "#d9d9d9"   // primary accent
 	readonly property color walColor8:     "#6c6c6c"   // dim/overlay
 	readonly property color walColor13:    "#bfbfbf"   // secondary accent
-
-	// ── Font ─────────────────────────────────────────────────────────────
-	readonly property string fontMono: "JetBrainsMono Nerd Font"
 
 	// ── Panel visibility ─────────────────────────────────────────────────
 	property bool dashboardVisible: false
@@ -54,7 +51,11 @@ ShellRoot {
 	property var notificationHistory: []
 	property var appUsage: ({})
 
-	property var filteredApps: {
+	// appsSubTab: 0 = よく使う(使用回数上位のみ), 1 = すべて
+	property int appsSubTab: 0
+	property int favoriteAppsLimit: 8
+
+	property var sortedApps: {
 		var source = appList
 		var usage = appUsage
 		if (searchTerm !== "") {
@@ -72,6 +73,12 @@ ShellRoot {
 			if (countB !== countA) return countB - countA
 			return a.name.localeCompare(b.name)
 		})
+	}
+
+	// 検索中は常に全件から絞り込む。未検索時のみ「よく使う」で上位数件に絞る
+	property var filteredApps: {
+		if (searchTerm !== "" || appsSubTab === 1) return sortedApps
+		return sortedApps.slice(0, favoriteAppsLimit)
 	}
 
 	property int selectedIndex: 0

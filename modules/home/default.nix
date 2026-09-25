@@ -12,6 +12,7 @@
     ./cli-tools
     ./theming
     ./screenshot
+    ./viewers
   ];
 
 
