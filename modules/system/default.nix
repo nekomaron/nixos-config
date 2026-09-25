@@ -14,5 +14,7 @@
     ./filemanager.nix
     ./ime.nix
     ./steam.nix
+
+    ./nvidia.nix
   ];
 }
