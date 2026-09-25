@@ -12,5 +12,6 @@
     ./bluetooth.nix
     ./shell.nix
     ./filemanager.nix
+    ./ime.nix
   ];
 }
