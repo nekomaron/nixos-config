@@ -15,7 +15,7 @@
 
   outputs = { self, nixpkgs, home-manager, quickshell,... }:
     let
-      username = "testuser";
+      username = "nekomaron";
     in
     {
       nixosConfigurations.test-vm = nixpkgs.lib.nixosSystem {
